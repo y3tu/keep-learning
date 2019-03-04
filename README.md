@@ -1,6 +1,7 @@
 # 文章收藏     
 - #### Java  
     1. [Java 8 中的 Streams API 详解](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/)  
+    2. [Java后台开发知识点快速复习手册导航页](https://blog.csdn.net/qqxx6661/article/details/86775594)
 
 - #### Docker  
     1.[Centos7上安装docker](https://www.cnblogs.com/yufeng218/p/8370670.html)   
