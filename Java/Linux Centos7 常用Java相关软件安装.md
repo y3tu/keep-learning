@@ -1,4 +1,13 @@
-[TOC]
+<!-- GFM-TOC -->
+* [一、OpenJDK8](#OpenJDK8)
+* [二、Redis单机版](#Redis单机版)
+    * [安装](#安装)
+    * [启动](#启动)
+* [三、Docker](#Docker)
+    * [使用脚本安装docker](#使用脚本安装docker)
+    * [在docker中安装rabbitMQ](#在docker中安装rabbitMQ)
+<!-- GFM-TOC -->
+
 # OpenJDK8
 >当前的所有命令都在root下进行   
 
