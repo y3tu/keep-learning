@@ -4,7 +4,7 @@
 
 <h1 align="center">Keep Learning</h1>
 
-[常用资源](https://shimo.im/docs/MuiACIg1HlYfVxrj/)
+[Y3tu](<www.y3tu.com>)
 [GitHub](<https://github.com/y3tu/keep-learning>)
 [开始阅读](#java)
 
