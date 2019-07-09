@@ -6,6 +6,10 @@
     - [Linux相关](#linux相关)
 - [工具](#工具)
     - [docker](#docker)
+    - [内网穿透](#内网穿透)
+    - [idea插件](#idea插件)
+- [开源项目](#开源项目)
+   
     
 ## Java
 ### 基础
@@ -26,7 +30,7 @@
 ### idea插件
 * [jrebel 热部署神器](https://zeroturnaround.com/software/jrebel/)
 
-## 开源项目收藏  
+## 开源项目 
 ### 前端组件
 * [vue-aplayer 网页音乐播放器](https://github.com/MoePlayer/vue-aplayer)    
 * [vue-element-loading loading加载](https://github.com/biigpongsatorn/vue-element-loading)   
