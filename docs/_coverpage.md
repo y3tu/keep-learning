@@ -4,7 +4,7 @@
 
 <h1 align="center">Keep Learning</h1>
 
-[Y3tu](<www.y3tu.com>)
+[Y3tu](<http://www.y3tu.com>)
 [GitHub](<https://github.com/y3tu/keep-learning>)
-[开始阅读](#java)
+[开始阅读](#Java)
 
