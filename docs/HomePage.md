@@ -1,6 +1,6 @@
 ## 目录
 
-- [Java](#java)
+- [Java](#Java)
     - [基础](#基础)
     
 ## Java
