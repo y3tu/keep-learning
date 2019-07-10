@@ -28,7 +28,8 @@
 * [frp工具使用](tools/Frp内外穿透工具的使用.md)
 
 ### idea插件
-* [jrebel 热部署神器](https://zeroturnaround.com/software/jrebel/)
+* [Jrebel 热部署神器](https://zeroturnaround.com/software/jrebel/)
+* [Jrebel激活服务搭建](https://www.cnblogs.com/jimoer/p/11161339.html)
 
 ## 开源项目 
 ### 前端组件
