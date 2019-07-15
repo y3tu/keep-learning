@@ -31,6 +31,9 @@
 * [Jrebel 热部署神器](https://zeroturnaround.com/software/jrebel/)
 * [Jrebel激活服务搭建](https://www.cnblogs.com/jimoer/p/11161339.html)
 
+### 其他
+* [iTerm2设置及使用](https://www.cnblogs.com/guiyuhua/p/8610629.html)
+
 ## 开源项目 
 ### 前端组件
 * [vue-aplayer 网页音乐播放器](https://github.com/MoePlayer/vue-aplayer)    
