@@ -32,7 +32,9 @@
 * [Jrebel激活服务搭建](https://www.cnblogs.com/jimoer/p/11161339.html)
 
 ### 其他
-* [iTerm2设置及使用](https://www.cnblogs.com/guiyuhua/p/8610629.html)
+* [iTerm2设置及使用1](https://www.cnblogs.com/guiyuhua/p/8610629.html)
+* [iTerm2设置及使用2](https://www.cnblogs.com/soyxiaobi/p/9695931.html)
+
 
 ## 开源项目 
 ### 前端组件
