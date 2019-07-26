@@ -4,7 +4,7 @@
 
 <h1 align="center">Keep Learning</h1>
 
-[Y3tu](<http://www.y3tu.com>)
-[GitHub](<https://github.com/y3tu/keep-learning>)
+[Yao快速开发脚手架](<http://132.232.11.210:8080>)
+[GitHub](<https://github.com/y3tu>)
 [开始阅读](#Java)
 
