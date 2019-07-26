@@ -19,6 +19,7 @@
 ## 操作系统
 ### Linux相关
 * [CentOS7常用Java相关软件安装](os/CentOS7常用Java相关软件安装.md)
+* [CentOS 7 下安装 Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
 
 ## 工具
 ### docker
