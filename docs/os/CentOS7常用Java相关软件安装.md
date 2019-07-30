@@ -121,6 +121,8 @@ docker run -p 6379:6379 --name redis -v /root/redis/redis.conf:/etc/redis/redis.
 * redis-server /etc/redis/redis.conf：这个是关键配置，让redis不是无配置启动，而是按照这个redis.conf的配置启动
 * –appendonly yes：redis启动后数据持久化
 
+## docker 安装ElasticSearch 6.x
+https://www.cnblogs.com/szwdun/p/10652515.html
 ## docker 安装 elasticsearch + kibana 
 https://www.cnblogs.com/yufeng218/p/9601963.html
 
