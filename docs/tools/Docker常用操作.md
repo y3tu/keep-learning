@@ -30,7 +30,10 @@ docker run -d -p 8081:8081 -v /y3tu/log/y3tu-admin/:/logs/y3tu-admin y3tu-admin:
 * 删除所有已经停止的容器   
 `docker rm $(docker ps -a -q)`  
 * 删除所有镜像
-`docker rmi $(docker images -q)`    
+`docker rmi $(docker images -q)`  
+* 强制删除无法删除的镜像  
+`docker rmi -f <IMAGE_ID>`   
+`docker rmi -f $(docker images -q)`   
 * 进入一个已经在运行的容器
 ```
 docker exec -it 775c7c9ee1e1 /bin/bash 
