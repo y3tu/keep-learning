@@ -1,13 +1,13 @@
 [TOC]
 
 ## docker常用命令
-1. docker的启动、停止、重启
+* docker的启动、停止、重启
 ```
 service docker restart containerId(容器id)---重启
 service docker stop containerId(容器id)---停止
 service docker start containerId(容器id)---启动
 ```
-2.创建一个容器
+* 创建一个容器
 ```
 docker run -d -p 8081:8081 -v /y3tu/log/y3tu-admin/:/logs/y3tu-admin y3tu-admin:1.0 --name admin
 
@@ -17,23 +17,27 @@ docker run -d -p 8081:8081 -v /y3tu/log/y3tu-admin/:/logs/y3tu-admin y3tu-admin:
 --name 给容器起一个名字,可省略,省略的话docker会随机产生一个名字
 
 ```
-3.启动的容器列表         
+* 启动的容器列表         
 `docker ps`   
-4.查看创建的所有容器     
+* 查看创建的所有容器     
 `docker ps -a`    
-5.查看指定容器的日志记录     
+* 查看指定容器的日志记录     
 `docker logs -f containerId(容器id)`   
-6.删除某个容器,若正在运行,需要先停止     
-`docker rm containerId(容器id)`      
-7.删除所有容器   
-`docker rm $(docker ps -a -q)`   
-8.进入一个已经在运行的容器
+* 删除某个容器,若正在运行,需要先停止     
+`docker rm containerId(容器id)` 
+* 杀死所有正在运行的镜像
+`docker kill $(docker ps -a -q)`     
+* 删除所有已经停止的容器   
+`docker rm $(docker ps -a -q)`  
+* 删除所有镜像
+`docker rmi $(docker images -q)`    
+* 进入一个已经在运行的容器
 ```
 docker exec -it 775c7c9ee1e1 /bin/bash 
 775c7c9ee1e1 代表容器ID
 输入exit退出容器
 ```
-9.修改镜像的tag标签
+* 修改镜像的tag标签
 `docker tag upms-server:1.2 upms-server:1.4`
 
 ## 如何把本地镜像上传到docker hub
