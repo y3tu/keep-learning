@@ -4,8 +4,14 @@
 
 <h1 align="center">Keep Learning</h1>
 
-[Yao快速开发脚手架](<http://132.232.11.210:8080>)
-[Blog](<https://y3tu.github.io/blog>)
-[GitHub](<https://github.com/y3tu>)
+### 常用网站
+
+#### 视频
+<img src="https://www.bd2020.com/r/cms/www/bdfilm_v3/img/logo_s.png"  style="width:80px;height:40px"></img>
+[BD影视分享](https://www.bd2020.com/)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="http://www.dygang.com/images/logo.gif"  style="width:80x;height:40px"></img>
+[电影港](http://www.dygang.com/)
+
 [开始阅读](#Java)
 
