@@ -105,6 +105,7 @@ public static void main(String[] args) {
 #### sleep()
 Thread.sleep(millisec) 方法会休眠当前正在执行的线程，millisec 单位为毫秒。   
 sleep() 可能会抛出 InterruptedException，因为异常不能跨线程传播回 main() 中，因此必须在本地进行处理。线程中抛出的其它异常也同样需要在本地进行处理。
+
 ```java
 public void run() {
     try {
@@ -121,4 +122,45 @@ public void run() {
     Thread.yield();
 }
 ```
-### 三.中断
+### 三.中断 
+
+一个线程执行完毕后会自动结束，如果在运行过程中发生异常一会提前结束。
+
+#### InterruptedException
+
+通过调用一个线程的 interrupt() 来中断该线程，如果该线程处于阻塞、限期等待或者无限期等待状态，那么就会抛出 InterruptedException，从而提前结束该线程。但是不能中断 I/O 阻塞和 synchronized 锁阻塞。
+
+在 main() 中启动一个线程之后再中断它，由于线程中调用了 Thread.sleep() 方法，因此会抛出一个 InterruptedException，从而提前结束线程，不执行之后的语句。
+
+```java
+private static class MyThread1 extends Thread {
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(2000);
+                System.out.println("Thread run");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+}
+```
+
+```java
+public static void main(String[] args) throws InterruptedException {
+    Thread thread1 = new MyThread1();
+    thread1.start();
+    thread1.interrupt();
+    System.out.println("Main run");
+}
+
+
+java.lang.InterruptedException: sleep interrupted
+    at java.lang.Thread.sleep(Native Method)
+    at InterruptExample.lambda$main$0(InterruptExample.java:5)
+    at InterruptExample$$Lambda$1/713338599.run(Unknown Source)
+    at java.lang.Thread.run(Thread.java:745)
+```
+
+
+
