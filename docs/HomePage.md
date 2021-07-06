@@ -10,7 +10,7 @@
 * [Java 基础知识点](java/base/Java基础知识.md)
 
 #### 并发
-* [并发](java/concurrent/Java并发.md)
+* [并发](java/concurrent/Java并发知识点.md)
 * [Java中的锁](java/concurrent/Java中的锁.md)
 * [Java并发常见面试题](java/concurrent/Java并发常见面试题.md)
 
