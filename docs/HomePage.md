@@ -16,12 +16,12 @@
 
 ### 数据库
 
-- [执行计划explain](#database/执行计划explain.md)
+- [执行计划explain](database/执行计划explain.md)
 
 ### 工具
-* [正则表达式](#tool/正则表达式.md)
-* [Linux常用命令](#tool/Linux常用命令.md)
-* [Frp内外穿透工具的使用](#tool/Frp内外穿透工具的使用.md)
+* [正则表达式](tool/正则表达式.md)
+* [Linux常用命令](tool/Linux常用命令.md)
+* [Frp内外穿透工具的使用](tool/Frp内外穿透工具的使用.md)
 
   
 
