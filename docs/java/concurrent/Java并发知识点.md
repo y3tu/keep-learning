@@ -232,6 +232,8 @@ Java 提供了两种锁机制来控制多个线程对共享资源的互斥访问
 
 #### synchronized
 
+> 属于独占锁、悲观锁、可重入锁、非公平锁。
+
 作用于同一个对象，如果调用两个对象上的同步代码块，就不会进行同步。
 
 * 同步一个代码块
@@ -272,6 +274,8 @@ public synchronized static void fun() {
 ```
 
 #### ReentrantLock
+
+> 继承了Lock类，可重入锁、悲观锁、独占锁、互斥锁、同步锁
 
 ReentrantLock 是 java.util.concurrent（J.U.C）包中的锁。
 
