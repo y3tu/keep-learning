@@ -7,7 +7,7 @@
 ### Java
 
 #### 基础
-* [Java 基础知识点](java/base/Java基础知识.md)
+* [Java基础面试题](java/base/Java基础面试题.md)
 
 #### 并发
 * [并发](java/concurrent/Java并发知识点.md)
