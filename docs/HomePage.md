@@ -6,13 +6,11 @@
 
 ### Java
 
-#### 基础
-* [Java基础面试题](java/base/Java基础面试题.md)
-
-#### 并发
-* [并发](java/concurrent/Java并发知识点.md)
-* [Java中的锁](java/concurrent/Java中的锁.md)
-* [Java并发常见面试题](java/concurrent/Java并发常见面试题.md)
+* [Java基础](java/Java基础.md)
+* [Jvm](java/Jvm.md)
+* [并发](java/并发.md)
+* [Java锁](java/Java锁.md)
+* [Spring](java/Spring.md)
 
 ### 数据库
 
