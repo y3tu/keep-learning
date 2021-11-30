@@ -1,3 +1,4 @@
+
 ### 基本概念
 
 #### 进程和线程
@@ -120,6 +121,8 @@ ThreadPoolExecutor 的通用构造函数如下：
 ```java
 public ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> blockingQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler);
 ```
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f1644b822dfd4d159f939531e6ca7f2e~tplv-k3u1fbpfcp-watermark.awebp)
 
 * corePoolSize：核心线程大小。当有新任务时，如果线程池中的线程数没有达到核心线程大小，则会创建新的线程执行任务，否则将任务放入阻塞队列。
 * maximumPoolSize：最大线程数。当阻塞队列填满时，如果线程池中线程数没有超过最大线程数，则会创建新的线程运行任务(非核心线程)。否则根据拒绝策略处理新任务。非核心线程类似于临时借来的资源，这些线程在空闲时间超过 keepAliveTime 之后，就应该退出，避免资源浪费。
