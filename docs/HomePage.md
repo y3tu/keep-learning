@@ -8,7 +8,7 @@
 
 * [Java基础](java/Java基础.md)
 * [Jvm](java/Jvm.md)
-* [并发](java/并发.md)
+* [Java并发](java/Java并发.md)
 * [Java锁](java/Java锁.md)
 * [Spring](java/Spring.md)
 
