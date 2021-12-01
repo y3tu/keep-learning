@@ -757,6 +757,23 @@ public static void main(String[] args) {
 
 
 
+### ThreadLocal
+
+`ThreadLocal`即**线程变量**，用来提供**线程内部的局部变量**。这种变量在多线程环境下访问时能保证各个线程的变量相对独立于其他线程的变量。不同线程之间不会相互干扰，这种变量在线程的生命周期内起作用，减少同一个线程内多个函数或组件之间一些公共变量传递的复杂度。
+
+**特点**
+
+* 数据传递：保存每个线程绑定的数据，在需要的地方可以直接获取，避免参数直接传递带来的代码耦合问题。
+* 线程隔离：各线程之间的数据相互隔离却又具备并发性，避免同步方式带来的性能损失。
+
+**内部结构**
+
+* 每个Thread线程内部都有一个ThreadLocalMap实例，叫做threadLocals。
+* threadLocals里面存储ThreadLocal对象（key）和线程变量（value）。
+* ThreadLocalMap是ThreadLocal的内部类，由ThreadLocal向ThreadLocalMap设置和获取线程变量值。
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2faa6c9f69624f3c9e0308b30e25d97d~tplv-k3u1fbpfcp-watermark.awebp)
+
 
 
 ### 并发工具 J.U.C 
