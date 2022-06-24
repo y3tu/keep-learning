@@ -11,21 +11,15 @@
 - 事务管理：Spring 提供一个持续的事务管理接口，可以扩展到上至本地事务下至全局事务 （JTA）。
 - 异常处理：Spring 提供方便的API把具体技术相关的异常（比如由JDBC，Hibernate等抛出的）转化为一致的unchecked异常。
 
-
-
 ### 2. Spring框架的七⼤模块
 
-* Spring Core：框架的最基础部分，提供 IoC 容器，对 bean 进⾏管理。
-
-* Spring Context：继承BeanFactory，提供上下⽂信息，扩展出JNDI、EJB、电⼦邮件、国际化等功能。
-
+- Spring Core：框架的最基础部分，提供 IoC 容器，对 bean 进⾏管理。
+- Spring Context：继承BeanFactory，提供上下⽂信息，扩展出JNDI、EJB、电⼦邮件、国际化等功能。
 - Spring DAO：提供了JDBC的抽象层，还提供了声明性事务管理⽅法。
 - Spring ORM：提供了JPA、JDO、Hibernate、MyBatis 等ORM映射层。
 - Spring AOP：集成了所有AOP(切面编程)功能。
 - Spring Web：提供了基础的 Web 开发的上下⽂信息，现有的Web框架，如JSF、Tapestry、Structs 等，提供了集成。
 - Spring Web MVC：提供了 Web 应⽤的 Model-View-Controller 全功能实现。
-
-
 
 ### 3. Spring中的bean的作用域有哪些？
 
@@ -34,8 +28,6 @@
 * request：每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP request内有效。
 * session：每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP session内有效。
 * global-session：全局session作用域，仅仅在基于Portlet的Web应用中才有意义，Spring5中已经没有了。
-
-
 
 ### 4. Spring是怎么解决循环依赖的？
 
@@ -55,20 +47,18 @@ IOC容器解决循环依赖的思路：
 5.  关联创建时，检查**正在被创建的Bean**中是否有即将注入的Bean。如果有，检查二级缓存中是否有当前创建好但没有赋值初始化的Bean。如果没有，检查三级缓存中是否有正在创建中的Bean。 至此一般会有，将这个Bean放入二级缓存，并从三级缓存中移除。
 6.  之后Bean被成功注入，最后执行`addSingleton()`，将这个完全创建好的Bean放入一级缓存，从二级缓存和三级缓存移除，并记录已经创建了的单实例Bean。
 
-
-
 ### 5. Spring中的bean生命周期了解吗？
 
-* **实例化Bean**:  Ioc容器通过获取BeanDefinition对象中的信息进⾏实例化，实例化对象被包装在 BeanWrapper对象中。
-* **设置对象属性（DI）**：通过BeanWrapper提供的设置属性的接⼝完成属性依赖注⼊
-* **注⼊Aware接⼝**：Spring会检测该对象是否实现了xxxAware接⼝，并将相关的 xxxAware实例注⼊给bean，通过xxxAware实例可以获取到获取其它 Bean，常用：
-  - 实现了BeanNameAware接口，调用setBeanName()方法，传入Bean的名字
-  - 实现了BeanClassLoaderAware接口，调用setBeanClassLoader()方法，传入ClassLoader 对象的实例。
-  - 实现了BeanFactoryAware接口，调用setBeanClassFacotory()方法，传入ClassLoader对象 的实例。
-* **BeanPostProcessor**：⾃定义的处理（分前置处理`postProcessBeforeInitialization()`和后置处理`postProcessAfterInitialization()`，后置处理在bean初始化方法之后执行）
-* **InitializingBean和init-method**：如果Bean实现了InitializingBean接口，执行afeterPropertiesSet()方法。.如果Bean在配置文件中的定义包含init-method属性，执行指定的方法。
-* **使用bean**
-* **destroy**：当要销毁Bean的时候，如果Bean实现了DisposableBean接口，执行destroy()方法。如果Bean在配置文件中的定义包含destroy-method属性，执行指定的方法。
+- **实例化Bean**:  Ioc容器通过获取BeanDefinition对象中的信息进⾏实例化，实例化对象被包装在 BeanWrapper对象中。
+- **设置对象属性（DI）**：通过BeanWrapper提供的设置属性的接⼝完成属性依赖注⼊
+- **注⼊Aware接⼝**：Spring会检测该对象是否实现了xxxAware接⼝，并将相关的 xxxAware实例注⼊给bean，通过xxxAware实例可以获取到获取其它 Bean，常用：
+- 实现了BeanNameAware接口，调用setBeanName()方法，传入Bean的名字
+- 实现了BeanClassLoaderAware接口，调用setBeanClassLoader()方法，传入ClassLoader 对象的实例。
+- 实现了BeanFactoryAware接口，调用setBeanClassFactory()方法，传入ClassLoader对象 的实例。
+- **BeanPostProcessor**：⾃定义的处理（分前置处理`postProcessBeforeInitialization()`和后置处理`postProcessAfterInitialization()`，后置处理在bean初始化方法之后执行）
+- **InitializingBean和init-method**：如果Bean实现了InitializingBean接口，执行afeterPropertiesSet()方法。.如果Bean在配置文件中的定义包含init-method属性，执行指定的方法。
+- **使用bean**
+- **destroy**：当要销毁Bean的时候，如果Bean实现了DisposableBean接口，执行destroy()方法。如果Bean在配置文件中的定义包含destroy-method属性，执行指定的方法。
 
 ### 6. SpringMVC工作流程了解吗？
 
@@ -94,15 +84,11 @@ IOC容器解决循环依赖的思路：
 - 适配器模式：Spring AOP的增强或通知（Advice）使用到了适配器模式、Spring MVC中也是用到了适配器模式适配Controller。
 - 策略模式： Bean的实例化的时候决定采⽤何种⽅式初始化bean实例(反射或者`CGLIB`动态字节码⽣成）
 
-
-
 ### 8. Spring中单例Bean线程安全问题
 
 单例bean存在线程问题， 主要是因为当多个线程操作同一个对象的时候，对这个对象的非静态成员变量的写操作会存在线程安全问题。 有两种常见的解决方案：
  1.在bean对象中尽量避免定义可变的成员变量（不太现实）。
  2.在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在ThreadLocal中（推荐的一种方式）。
-
-
 
 ### 9. 谈谈对Spring中的AOP理解
 
@@ -151,7 +137,6 @@ Spring AOP是基于动态代理的，如果要代理的对象实现了某个接�
 ### 10. `@Component`和`@Bean`的区别是什么？
 
 - 作用对象不同。`@Component`注解作用于类，而`@Bean`注解作用于方法。
-
 - `@Component`注解通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中（我们可以使用 @ComponentScan注解定义要扫描的路径）。`@Bean`注解通常是在标有该注解的方法中定义产生这个 bean，告诉Spring这是某个类的实例，当我需要用它的时候还给我。 
 - `@Bean`注解比`@Component`注解的自定义性更强，而且很多地方只能通过@Bean注解来注册bean。 比如当引用第三方库的类需要装配到Spring容器的时候，就只能通过@Bean注解来实现。
 
@@ -159,10 +144,8 @@ Spring AOP是基于动态代理的，如果要代理的对象实现了某个接�
 
 ### 11. Spring 事务管理的方式有几种？
 
-1.**编程式事务**：在代码中硬编码（不推荐使用）。 
-
+1.**编程式事务**：在代码中硬编码（不推荐使用）。
 2.**声明式事务**：在配置文件中配置（推荐使用），分为基于XML的声明式事务和基于注解的声明式事务。
-
 
 
 ### 12. Spring事务的隔离级别有哪几种？
@@ -193,7 +176,6 @@ Spring AOP是基于动态代理的，如果要代理的对象实现了某个接�
 - **PROPAGATION_NEVER**： 以非事务方式运行，如果当前存在事务，则抛出异常。
 
 **其他情况**：
-
 - **PROPAGATION_NESTED**： 如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于`PROPAGATION_REQUIRED`。
 
 
